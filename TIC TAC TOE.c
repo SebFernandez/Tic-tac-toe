@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <conio.h>
 
 void SHOW (int M [3][3], char N [3][3]);
 
@@ -33,7 +34,7 @@ int main () {
 			printf ("\n");
 			TATETI [i][j] = 1;
 			SHOW (TATETI, MIAU);
-
+			
 			for (i = 0; i < 3; i++) {
 				if (TATETI [i][0] + TATETI [i][1] + TATETI [i][2] == 3) {
 					flag = 1;
@@ -97,7 +98,7 @@ int main () {
 			break;
 }
 }
-	printf ("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+	system ("cls");
 	if (flag == 0){
 		printf ("Boooooooooooooooooooooooooring. It's a draw.\n");
 	} else if ( flag == 1) {
@@ -127,10 +128,9 @@ void SHOW (int M [3][3], char N [3][3]) {
 		}
 	}
 	
-	for (U = 0; U < 3; U++){
-		for (P = 0; P < 3; P++){
-			printf ("%c\t", N[U][P]);
-		}
-		printf ("\n");
-	}	
-}
+      printf(" %c | %c | %c\n", N[0][0], N[0][1], N[0][2]);
+      printf("---+---+---\n");
+      printf(" %c | %c | %c\n", N[1][0], N[1][1], N[1][2]);
+      printf("---+---+---\n");
+      printf(" %c | %c | %c\n", N[2][0], N[2][1], N[2][2]);
+	}
